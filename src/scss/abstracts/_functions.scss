@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// space(xl) -> 20px
+@function space($key) {
+  @if not map.has-key($spacing, $key) {
+    @error "Key spacing '#{$key}' tidak ada di $spacing.";
+  }
+  @return map.get($spacing, $key);
+}

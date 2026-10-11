@@ -1,0 +1,66 @@
+@use 'sass:map';
+@use '../abstracts' as *;
+
+// Dua kartu ini berbagi gaya dasar yang sama
+.info-card,
+.interest-card {
+  @include card-surface;
+  padding: space(xl3);
+
+  h3 {
+    margin-bottom: space(sm);
+  }
+
+  > p {
+    color: var(--color-text-light);
+  }
+
+  details {
+    margin-top: space(xl);
+  }
+
+  @include respond-down(mobile) {
+    padding: space(xl2);
+  }
+}
+
+.info-card {
+  h3 {
+    font-size: 21px;
+  }
+
+  ul {
+    padding-left: space(xl);
+  }
+}
+
+// @each: efek hover untuk setiap kartu diambil dari map $card-hover
+@each $card, $config in $card-hover {
+  .#{$card} {
+    @include hover-lift(map.get($config, lift), map.get($config, shadow));
+  }
+}
+
+.card-icon {
+  @include icon-box(55px, 15px, 25px);
+  margin-bottom: space(xl);
+}
+
+.interest-icon {
+  display: block;
+  margin-bottom: space(lg);
+  color: var(--color-primary);
+  font-size: 35px;
+}
+
+// Grid 3 kolom dipakai bersama oleh skills dan interests
+.card-grid,
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: space(xl2);
+
+  @include respond-down(tablet) {
+    grid-template-columns: 1fr;
+  }
+}

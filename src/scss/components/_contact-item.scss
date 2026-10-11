@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.contact-item {
+  @include card-surface;
+  @include flex(flex-start, center, space(lg));
+  min-width: 260px;
+  flex: 1 1 300px;
+  padding: space(xl);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  a {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  @include respond-down(mobile) {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+.contact-icon {
+  @include icon-box(45px, $radius-small, 20px);
+  flex: 0 0 45px;
+}

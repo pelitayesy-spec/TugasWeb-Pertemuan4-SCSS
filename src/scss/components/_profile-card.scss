@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.profile-card {
+  @include card-surface($radius-large);
+  margin: 0;
+  padding: space(lg);
+  transform: rotate(-1deg);
+
+  figcaption {
+    padding: space(lg) space(sm) space(xs);
+    color: var(--color-text-light);
+    font-size: 13px;
+    text-align: center;
+  }
+
+  @include respond-down(tablet) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+.profile-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 22px;
+}

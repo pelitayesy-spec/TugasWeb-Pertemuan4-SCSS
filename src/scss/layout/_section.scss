@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+.home-greeting,
+.section-label {
+  @include section-label;
+}
+
+.content-section {
+  padding: space(xl7) 0;
+
+  @include respond-down(mobile) {
+    padding: space(xl6) 0;
+  }
+}
+
+.section-heading {
+  margin-bottom: space(xl4);
+
+  .section-label {
+    margin-bottom: space(xs);
+  }
+
+  h2 {
+    margin-bottom: space(sm);
+    font-size: 40px;
+    line-height: 1.2;
+
+    @include respond-down(mobile) {
+      font-size: 31px;
+    }
+  }
+
+  > p:last-child {
+    max-width: 700px;
+    color: var(--color-text-light);
+  }
+}

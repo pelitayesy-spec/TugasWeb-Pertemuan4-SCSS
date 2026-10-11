@@ -1,0 +1,9 @@
+// Entry point 7-1 pattern.
+// Semua @use harus berada di paling atas file.
+@use 'abstracts';
+@use 'vendors';
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'pages';
+@use 'themes';

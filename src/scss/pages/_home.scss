@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.home-section {
+  min-height: 620px;
+  @include flex(center, center);
+  padding: space(xl7) space(xl);
+  text-align: center;
+
+  h2 {
+    margin-bottom: space(lg);
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.15;
+  }
+
+  h3 {
+    margin-bottom: space(lg);
+    font-size: 22px;
+  }
+
+  @include respond-down(tablet) {
+    min-height: 520px;
+  }
+
+  @include respond-down(mobile) {
+    min-height: 500px;
+    padding: space(xl6) space(sm);
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+}
+
+.home-content {
+  max-width: 800px;
+}
+
+.home-greeting {
+  margin-bottom: space(sm);
+}
+
+.home-description {
+  max-width: 650px;
+  margin: 0 auto space(xl3);
+  color: var(--color-text-light);
+  font-size: 18px;
+}

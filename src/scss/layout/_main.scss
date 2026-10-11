@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+// CSS Grid 12 kolom untuk struktur halaman
+main {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 space(xl2);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: space(xl2);
+
+  > section {
+    grid-column: 1 / -1;
+  }
+
+  @include respond-down(mobile) {
+    padding-left: space(xl);
+    padding-right: space(xl);
+  }
+}

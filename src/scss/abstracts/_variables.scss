@@ -1,0 +1,72 @@
+// ========================================
+// COLORS
+// ========================================
+$color-primary: #c8439e;
+$color-secondary: #ff8fab;
+$color-accent: #ffd166;
+$color-background: #fff9fc;
+$color-surface: #ffffff;
+$color-text: #292536;
+$color-text-light: #777080;
+$color-border: #eee5f0;
+$color-primary-soft: #f1ebff;
+$color-note: #f7f2ff;
+$color-white: #ffffff;
+$color-header-bg: rgba(255, 255, 255, 0.95);
+$color-footer-bg: #292536;
+
+// Warna mode gelap
+$dark-background: #17141d;
+$dark-surface: #211d29;
+$dark-text: #f4eff7;
+$dark-text-light: #b9b0bf;
+$dark-border: #39313f;
+$dark-primary-soft: #302842;
+$dark-note: #29223a;
+$dark-header-bg: rgba(29, 25, 35, 0.95);
+$dark-footer-bg: #0f0d13;
+
+// ========================================
+// SPACING
+// ========================================
+$spacing: (
+  xs: 5px,
+  sm: 8px,
+  md: 12px,
+  lg: 16px,
+  xl: 20px,
+  xl2: 24px,
+  xl3: 30px,
+  xl4: 40px,
+  xl5: 50px,
+  xl6: 60px,
+  xl7: 80px,
+  xl8: 110px,
+);
+
+// ========================================
+// TYPOGRAPHY, RADIUS, SHADOW, LAYOUT
+// ========================================
+$font-main: Arial, Helvetica, sans-serif;
+$radius-small: 12px;
+$radius-medium: 20px;
+$radius-large: 30px;
+$radius-pill: 999px;
+$shadow-soft: 0 10px 30px rgba(60, 40, 80, 0.08);
+$max-width: 1100px;
+
+// ========================================
+// BREAKPOINTS (desktop-first, dipakai respond-down)
+// ========================================
+$breakpoints: (
+  tablet: 800px,
+  mobile: 600px,
+);
+
+// ========================================
+// EFEK HOVER KARTU (dipakai oleh @each di components/_card.scss)
+// ========================================
+$card-hover: (
+  info-card: (lift: 7px, shadow: 0 15px 35px rgba(60, 40, 80, 0.12)),
+  interest-card: (lift: 5px, shadow: 0 15px 35px rgba(60, 40, 80, 0.1)),
+);

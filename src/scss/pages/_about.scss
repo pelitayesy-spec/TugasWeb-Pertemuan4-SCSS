@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: space(xl5);
+  align-items: center;
+
+  @include respond-down(tablet) {
+    grid-template-columns: 1fr;
+    gap: space(xl4);
+  }
+}
+
+.about-text > p {
+  color: var(--color-text-light);
+}
+
+.about-note {
+  margin-top: space(xl2);
+  padding: space(xl2);
+  background-color: var(--color-note);
+  border-left: 5px solid var(--color-primary);
+  border-radius: $radius-small;
+
+  h3 {
+    margin-bottom: space(sm);
+    color: var(--color-primary);
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.student-since {
+  margin-top: space(xl2);
+}

@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #{$dark-background};
+    --color-surface: #{$dark-surface};
+    --color-text: #{$dark-text};
+    --color-text-light: #{$dark-text-light};
+    --color-border: #{$dark-border};
+    --color-primary-soft: #{$dark-primary-soft};
+    --color-note: #{$dark-note};
+  }
+
+  .site-header {
+    background-color: $dark-header-bg;
+  }
+
+  .nav-link:hover {
+    background-color: $dark-primary-soft;
+  }
+
+  .site-footer {
+    background-color: $dark-footer-bg;
+  }
+}

@@ -1,0 +1,62 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Mixin 1: media query desktop-first (max-width)
+@mixin respond-down($bp) {
+  $width: map.get($breakpoints, $bp);
+  @if $width {
+    @media (max-width: $width) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint '#{$bp}' tidak ada di $breakpoints.";
+  }
+}
+
+// Mixin 2: flexbox shorthand
+@mixin flex($justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Mixin 3: permukaan kartu (background, border, radius, shadow)
+@mixin card-surface($radius: $radius-medium) {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: $radius;
+  box-shadow: $shadow-soft;
+}
+
+// Mixin 4: efek naik saat hover
+@mixin hover-lift($distance, $shadow: null) {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-$distance);
+
+    @if $shadow {
+      box-shadow: $shadow;
+    }
+  }
+}
+
+// Mixin 5: kotak ikon
+@mixin icon-box($size, $radius, $font-size) {
+  @include flex(center, center);
+  width: $size;
+  height: $size;
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  border-radius: $radius;
+  font-size: $font-size;
+}
+
+// Mixin 6: label kecil di atas judul
+@mixin section-label {
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}

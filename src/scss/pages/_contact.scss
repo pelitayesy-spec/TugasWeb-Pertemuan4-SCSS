@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.contact-section {
+  padding-bottom: space(xl8);
+}
+
+.contact-info {
+  @include flex(flex-start, stretch, space(xl));
+  flex-wrap: wrap;
+
+  @include respond-down(mobile) {
+    flex-direction: column;
+  }
+}
+
+.contact-note {
+  margin-top: space(xl2);
+}

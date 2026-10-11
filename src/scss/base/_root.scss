@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+// Warna dijadikan CSS custom property supaya mode gelap bisa menimpanya.
+:root {
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+  --color-background: #{$color-background};
+  --color-surface: #{$color-surface};
+  --color-text: #{$color-text};
+  --color-text-light: #{$color-text-light};
+  --color-border: #{$color-border};
+  --color-primary-soft: #{$color-primary-soft};
+  --color-note: #{$color-note};
+}

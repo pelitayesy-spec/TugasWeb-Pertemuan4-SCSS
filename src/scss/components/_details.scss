@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+details summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.interactive-box {
+  @include card-surface;
+  max-width: 700px;
+  margin: space(xl) auto 0;
+  padding: space(xl) space(xl2);
+  text-align: left;
+}
